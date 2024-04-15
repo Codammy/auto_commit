@@ -13,11 +13,11 @@ if [ -e .git ]; then
 			git add .
 			DIRLEN=$(ls | wc -l)
 			if [[ "$FILECOUNT" -lt "$DIRLEN" ]]; then
-				git commit -m "Created $(ls -t | head -1)"
+				git commit -m "Created $(ls -t | head -1)" >> commit_history
 			elif [[ "$FILECOUNT" -gt "$DIRLEN" ]]; then
-				git commit -m "Rwmoved a file"
+				git commit -m "Rwmoved a file" >> commit_history
 			else
-				git commit -m "Made changes to to $(ls -t | head -1)"
+				git commit -m "Made changes to to $(ls -t | head -1)" commit_history
 			fi
 			FILECOUNT=$DIRLEN;
 			LASTMOD=$MOD;
