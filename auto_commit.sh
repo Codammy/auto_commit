@@ -8,7 +8,7 @@ LASTMOD=$(date -r .);
 
 if [ -e .git ]; then
 	while [ 1 ]; do
-		MOD=$(date -r .)
+		MOD=$(date -r $(ls -t | head -1))
 		if [ "$MOD" != "$LASTMOD" ]; then
 			git add .
 			DIRLEN=$(ls | wc -l)
