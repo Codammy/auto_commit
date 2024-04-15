@@ -59,3 +59,5 @@ no changes added to commit (use "git add" and/or "git commit -a")
  1 file changed, 12 insertions(+)
 [main 3537232] Made changes to to commit_history
  1 file changed, 2 insertions(+)
+[main d58da19] Created test
+ 3 files changed, 3 insertions(+), 2 deletions(-)
