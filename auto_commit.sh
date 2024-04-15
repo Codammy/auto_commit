@@ -7,6 +7,7 @@ LASTMOD=$(date -r .);
 # alias add="git add";
 
 export AUTOCOMMITMSG
+echo $AUTOCOMMITMSG
 if [ -e .git ]; then
 	while [ 1 ]; do
 		MOD=$(date -r $(ls -t | head -1))
