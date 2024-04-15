@@ -6,6 +6,7 @@ LASTMOD=$(date -r .);
 # alias commit="git commit -m";
 # alias add="git add";
 
+echo "$AUTOCOMMITMSG"
 if [ -e .git ]; then
 	while [ 1 ]; do
 		MOD=$(date -r $(ls -t | head -1))
@@ -15,7 +16,7 @@ if [ -e .git ]; then
 			if [[ "$FILECOUNT" -lt "$DIRLEN" ]]; then
 				git commit -m "Created $(ls -t | head -1)" >> commit_history
 			elif [[ "$FILECOUNT" -gt "$DIRLEN" ]]; then
-				git commit -m "Rwmoved a file" >> commit_history
+				git commit -m "Removed a file" >> commit_history
 			else
 				if [ "$AUTOCOMMITMSG" == '' ]; then
 					AUTOCOMMITMSG="Made changes to to $(ls -t | head -1)";
