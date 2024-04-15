@@ -1,0 +1,3 @@
+#!/bin/bash
+# welcomes logged in user
+echo "Welcome $(whoami)"
