@@ -17,10 +17,10 @@ if [ -e .git ]; then
 			elif [[ "$FILECOUNT" -gt "$DIRLEN" ]]; then
 				git commit -m "Rwmoved a file" >> commit_history
 			else
-				if [[ $AUTOCOMMITMSG == '' ]]; then
+				if [ "$AUTOCOMMITMSG" == '' ]; then
 					AUTOCOMMITMSG="Made changes to to $(ls -t | head -1)";
 				fi
-				git commit -m $AUTOCOMMITMSG >> commit_history
+				git commit -m "$AUTOCOMMITMSG" >> commit_history
 			fi
 			FILECOUNT=$DIRLEN;
 			LASTMOD=$MOD;
