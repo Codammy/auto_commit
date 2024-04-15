@@ -18,3 +18,6 @@
 [main e69ad31] Made changes to to proto
  3 files changed, 4 insertions(+), 2 deletions(-)
  delete mode 120000 .#proto
+[main 62b9374] Made changes to to proto
+ 2 files changed, 3 insertions(+)
+ create mode 100644 .auto_commit.sh.swp
