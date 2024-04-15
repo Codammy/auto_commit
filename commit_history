@@ -4,3 +4,6 @@
 [main df651f6] Created commit_history
  1 file changed, 3 insertions(+)
  create mode 100644 commit_history
+[main 683f307] Created test
+ 2 files changed, 4 insertions(+)
+ create mode 100644 test
