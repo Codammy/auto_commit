@@ -12,3 +12,7 @@
  2 files changed, 4 insertions(+)
 [main 8aeab7d] Made changes to to test
  1 file changed, 2 insertions(+)
+[main 659110e] Created #auto_commit.sh#
+ 3 files changed, 34 insertions(+)
+ create mode 100755 #auto_commit.sh#
+ create mode 120000 .#auto_commit.sh
