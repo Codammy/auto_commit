@@ -9,9 +9,10 @@ LASTMOD=$(date -r .);
 
 if [ -e .git ]; then
 
-	if [ "$1" != "-o" -a "$2" == '' ]; then
-		$2="/dev/null";
-	fi
+#	if [ "$1" != "-o" -a "$2" == '' ]; then
+#		$2="/dev/null";
+#	fi
+	$2=.commit_history
 	while [ 1 ]; do
 		MOD=$(date -r $(ls -t | head -1))
 		if [ "$MOD" != "$LASTMOD" ]; then
