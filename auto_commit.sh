@@ -2,20 +2,22 @@
 # automatically commits a change made on a file when saved
 
 FIlECOUNT=$(ls | wc -l);
-LASTMOD=$(date -r .)
+LASTMOD=$(date -r .);
+# alias commit="git commit -m";
+# alias add="git add";
+
 if [ -e .git ]; then
-	echo "This is a git repo"
 	while [ 1 ]; do
 		MOD=$(date -r .)
 		if [ "$MOD" != "$LASTMOD" ]; then
-			echo "file changed"
+			git add .
 			DIRLEN=$(ls | wc -l)
 			if [[ "$FILECOUNT" -lt "$DIRLEN" ]]; then
-				echo "Created $(ls -t | head -1)"
+				git commit -m "Created $(ls -t | head -1)"
 			elif [[ "$FILECOUNT" -gt "$DIRLEN" ]]; then
-				echo "Rwmoved a file"
+				git commit -m "Rwmoved a file"
 			else
-				echo "Made changes to to $(ls -t | head -1)"
+				git commit -m "Made changes to to $(ls -t | head -1)"
 			fi
 			FILECOUNT=$DIRLEN;
 			LASTMOD=$MOD;
