@@ -12,3 +12,6 @@
 [main 476f3ed] Made changes to to proto
  3 files changed, 5 insertions(+), 2 deletions(-)
  delete mode 120000 .#proto
+[main e0f2463] Made changes to to proto
+ 2 files changed, 4 insertions(+)
+ create mode 120000 .#proto
