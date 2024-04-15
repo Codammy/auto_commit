@@ -55,3 +55,5 @@ Changes not staged for commit:
 	modified:   commit_history
 
 no changes added to commit (use "git add" and/or "git commit -a")
+[main 1a66ec7] Created commit_history
+ 1 file changed, 12 insertions(+)
