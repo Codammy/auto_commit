@@ -1,7 +1,7 @@
 #!/bin/bash
 # automatically commits a change made on a file when saved
 
-if [ -ne .git ]; then
+if [![ -eds .git ]]; then
 	echo "Not a git repo! run git init to get started"
 	exit 1;
 fi
