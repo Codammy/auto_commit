@@ -5,13 +5,12 @@
 ## How to use
 After cloning this repo copy or move the `auto_commit.sh` file to your workspace/codebase or make it a symbolic link of it on one of your system's path in order for you to use it  globally on your host e.g
 
-bash```
-ln -s auto_commit.sh /usr/bin/commit
-```
+```bash
+ln -s auto_commit.sh /usr/bin/commit```
 
 Make sure the current dirrctory has an **upstream git branch** (i.e is a git repository) then run:
 
-bash```
+```bash
 ./auto_commit.sh &
 ```
 
@@ -22,6 +21,6 @@ You can run git push anytime you feel it's okay to push.
 ### Requirements
 Any pc that supports bash scripting (any linux distribution should work).
 
-_You can always run git log to view all commit history._
+You can always run git log to view all commit history.
 
 If you're reading this kindly give this repository a star.
