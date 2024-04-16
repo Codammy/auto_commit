@@ -1,6 +1,6 @@
 # auto_commit
 
-<p>Command line utility program that watches any changes made to a directory (any content in it) and commits it to git in the backgroud without ultering the normal user operation of the host pc, thereby increasing the number of commits in that branch and overall github commit history if used in all branch repository.</p>
+<p>Command line utility program that watches any changes made to a directory (any content in it) and commits it to git in the backgroud without ultering the normal user operation of the host pc, thereby increasing the number of commits in that branch and overall github contribution if used in all branch repository.</p>
 
 ## Requirements
 Any pc that supports bash scripting (any linux distribution should work).
@@ -24,6 +24,7 @@ You can run git push anytime you feel it's okay to push.
 
 *__You can always run git log to view all commit history.__*
 
+## How it works
 
 __If you're reading this kindly give this repository a star 🌟.__
 
