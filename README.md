@@ -29,13 +29,16 @@ The utility checks if the working directory ia a git repository, checks for the 
 
 ### Commit messages
 Commit messages would be generated automatically by the program, depending on the type of changes made
-<center>
-    creation of file => created "file name"
-    delete update => deleted a file
-    modify => made changes to "filename"
-</center>
 
-A custom commit message can also be used by setting a global variable __AUTOCOMMITMSG__ like this `export AUTOCOMMITMSG='custom commit message'`. Note that this commit message would be the one the program would use for any other modifications made on a file, to revert back unset the AUTOCOMMITMSG with this command `unset AUTOCOMMITMSG` or set it to an empty string like this `AUTOCOMMITMSG=''`
+| Update | Commit message |
+|--------|----------------|
+| creation of file | created "file name"|
+| delete update | deleted a file|
+| modify |  made changes to "filename"|
+
+A custom commit message can also be used by setting a global variable __AUTOCOMMITMSG__ like this `export AUTOCOMMITMSG='custom commit message'`. 
+Note that this commit message would be the one the program would use for any other modifications made on a file, to revert back unset the AUTOCOMMITMSG with this command `unset AUTOCOMMITMSG` or set it to an empty string like this `AUTOCOMMITMSG=''`
+
 ---
 
 __If you're reading this kindly give this repository a star 🌟.__
