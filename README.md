@@ -22,7 +22,7 @@ This action keeps the program in **watch mode** i.e in the background.
 
 You can run git push anytime you feel it's okay to push.
 
-You can always run git log to view all commit history.
+__You can always run git log to view all commit history.__
 
 
 If you're reading this kindly give this repository a star 🌟.
