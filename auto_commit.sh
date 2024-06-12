@@ -13,6 +13,7 @@ O='.commit_history'
 # alias commit="git commit -m";
 # alias add="git add";
 
+echo -e "Autumating git commit...\n--- Watch mode activated."
 while [ -d .git ]; do
 	MOD=$(date -r $(ls -t | head -1))
 	if [ "$MOD" != "$LASTMOD" ]; then
