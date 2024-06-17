@@ -38,8 +38,8 @@ end() {
 	exit
 }
 
-if [[ $1 -eq "start" ]]; then
+if [[ "$1" -eq "start" ]]; then
 	start_commit
-elif [[ $1 -eq "stop" ]]; then
+elif [[ "$1" -eq "stop" ]]; then
 	end
 fi
