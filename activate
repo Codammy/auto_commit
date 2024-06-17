@@ -1,1 +1,7 @@
-commit &
+# mkdir -p ~/.config/systemd/user
+# cp auto_commit.service ~/.config/systemd/user
+# systemctl --user daemon-reload
+
+cp auto_commit.service /etc/systemd/system
+systemctl daemon-reload
+systemctl enable auto_commit

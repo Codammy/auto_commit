@@ -1,13 +1,13 @@
 [Unit]
-Description=<project description>
+Description=Commandline Utility that automates git commits 
 
 [Service]
-User=<user e.g root>
-WorkingDirectory=<path to project directory>
-ExecStart=<script which needs to be executed>
+# User=<user e.g root>
+# WorkingDirectory=$PWD
+ExecStart=/home/$USER/commit/commit.sh
 
-Restart=always
-RestartSec=3
+# Restart=always
+# RestartSec=3
 
 [Install]
 WantedBy=multi-user.target

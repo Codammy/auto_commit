@@ -51,7 +51,7 @@ end() {
 
 if [ "$1" == "start" ]; then
        	start_commit
-elif [ "$1" == "stop" ]; then
+elif [ "$1" == "end" ]; then
 	end
 else
 	help

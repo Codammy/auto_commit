@@ -1,1 +1,5 @@
-pkill commit
+# systemctl --user disable auto_commit.service
+# rm ~/.config/systemd/user/auto_commit.service
+
+rm /etc/systemd/system/auto_commit.service
+systemctl disable auto_commit
