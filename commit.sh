@@ -11,7 +11,7 @@ LASTMOD=$(date -r .);
 O="/home/$USER/.commit_history"
 
 start_commit () {
-	echo -e "Automating git commit...\n--- Watch mode activated."
+#	echo -e "Automating git commit...\n--- Watch mode activated."
 	while [ -d .git ]; do
 		MOD=$(date -r $(ls -t | head -1) > /dev/null)
 		if [ "$MOD" != "$LASTMOD" ]; then
