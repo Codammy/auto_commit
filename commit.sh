@@ -1,11 +1,6 @@
 #!/bin/bash
 # automatically commits a change made on a file when saved
 
-if [ ! -d .git ]; then
-	echo "Not a git repo! run git init to get started"
-	exit 1;
-fi
-
 FIlECOUNT=$(ls | wc -l);
 LASTMOD=$(date -r .);
 O="/home/$USER/.commit_history"
@@ -21,8 +16,15 @@ echo "auto_commit commits changes made on a file to git immediately when there's
 }
 
 start_commit () {
-#	echo -e "Automating git commit...\n--- Watch mode activated."
-	while [ -d .git ]; do
+	if [ ! -d .git ]; then
+		echo "Not a git repo! run git init to get started"
+		exit 1;
+	fi
+
+	# echo -e "Automating git commit...\n--- Watch mode activated."
+
+	while [ True ]; do
+		if [ -d .git ]; then
 		MOD=$(date -r $(ls -t | head -1) > /dev/null)
 		if [ "$MOD" != "$LASTMOD" ]; then
 			git add .
@@ -39,6 +41,7 @@ start_commit () {
 			fi
 			FILECOUNT=$DIRLEN;
 			LASTMOD=$MOD;
+		fi
 		fi
 	done;
 }
