@@ -10,6 +10,16 @@ FIlECOUNT=$(ls | wc -l);
 LASTMOD=$(date -r .);
 O="/home/$USER/.commit_history"
 
+help () {
+echo "auto_commit commits changes made on a file to git immediately when there's a change in the directory.
+
+    Usage: path_to_script/commit start &
+    e.g ./commit start &
+    Options:
+        start - starts the process
+        end - kills all running instance of the program"
+}
+
 start_commit () {
 #	echo -e "Automating git commit...\n--- Watch mode activated."
 	while [ -d .git ]; do
@@ -40,7 +50,9 @@ end() {
 }
 
 if [ "$1" == "start" ]; then
-       	start_commit;
+       	start_commit
 elif [ "$1" == "stop" ]; then
-	end;
+	end
+else
+	help
 fi
