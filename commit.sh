@@ -39,8 +39,6 @@ end() {
 }
 
 if [ "$1" == "start" ]; then
-	sleep 1
-	bg %%
        	start_commit;
 elif [ "$1" == "stop" ]; then
 	end;
