@@ -6,7 +6,7 @@ echo "[Unit]
 Description=Commandline Utility that automates git commits
 
 [Service]
-ExecStart=$PWD/commit.sh
+ExecStart=$PWD/commit.sh start
 
 [Install]
 WantedBy=multi-user.target" > auto_commit.service

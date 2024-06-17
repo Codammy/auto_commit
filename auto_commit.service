@@ -2,7 +2,7 @@
 Description=Commandline Utility that automates git commits
 
 [Service]
-ExecStart=/home/codam/commit/commit.sh
+ExecStart=/home/codam/commit/commit.sh start
 
 [Install]
 WantedBy=multi-user.target

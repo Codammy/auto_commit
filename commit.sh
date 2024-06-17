@@ -48,6 +48,7 @@ start_commit () {
 
 end() {
 	pkill "$0"
+	echo "Bye bye.."
 	echo -e "You can always check "$O" to see your commit history."
 	exit
 }
