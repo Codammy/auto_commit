@@ -39,7 +39,8 @@ end() {
 }
 
 if [ "$1" == "start" ]; then
-	bg $(pidof commit.sh); start_commit;
+	bg %%
+       	start_commit;
 elif [ "$1" == "stop" ]; then
 	end;
 fi
