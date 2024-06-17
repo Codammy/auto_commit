@@ -22,7 +22,7 @@ start_commit () {
 	fi
 
 	# echo -e "Automating git commit...\n--- Watch mode activated."
-
+	git config --global --add safe.directory $PWD
 	while [ True ]; do
 		if [ -d .git ]; then
 		MOD=$(date -r $(ls -t | head -1) > /dev/null)

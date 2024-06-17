@@ -2,6 +2,8 @@
 Description=Commandline Utility that automates git commits
 
 [Service]
+User=root
+WorkingDirectory=/home/codam/commit
 ExecStart=/home/codam/commit/commit.sh start
 
 [Install]

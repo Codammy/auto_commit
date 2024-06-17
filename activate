@@ -1,4 +1,4 @@
-# mkdir -p ~/.config/systemd/user
+#mkdir -p ~/.config/systemd/user
 # cp auto_commit.service ~/.config/systemd/user
 # systemctl --user daemon-reload
 
@@ -6,12 +6,16 @@ echo "[Unit]
 Description=Commandline Utility that automates git commits
 
 [Service]
+User=$USER
+WorkingDirectory=$PWD
 ExecStart=$PWD/commit.sh start
 
 [Install]
 WantedBy=multi-user.target" > auto_commit.service
 
 cp auto_commit.service /etc/systemd/system
+# cp auto_commit.service ~/.config/systemd/user
+
 
 systemctl daemon-reload
 systemctl enable auto_commit
