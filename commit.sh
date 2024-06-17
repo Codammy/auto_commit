@@ -39,7 +39,7 @@ end() {
 }
 
 if [ "$1" == "start" ]; then
-	bg; start_commit;
+	bg pid; start_commit;
 elif [ "$1" == "stop" ]; then
 	end;
 fi
