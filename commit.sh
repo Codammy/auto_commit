@@ -16,7 +16,12 @@ echo "auto_commit commits changes made on a file to git immediately when there's
 }
 
 start_commit () {
-	if [ ! -d .git ]; then
+	GIT_INIT="$1/.git"
+	if [ -z $1 ]; then
+		GIT_INIT=".git"
+	fi
+	echo $GIT_INIT
+	if [ ! -d "$GIT_INIT" ]; then
 		echo "Not a git repo! run git init to get started"
 		exit 1;
 	fi
@@ -54,7 +59,7 @@ end() {
 }
 
 if [ "$1" == "start" ]; then
-       	start_commit
+       	start_commit $2
 elif [ "$1" == "end" ]; then
 	end
 else
